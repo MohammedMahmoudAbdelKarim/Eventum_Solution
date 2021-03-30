@@ -1,0 +1,8 @@
+// Changing Bootstrap Theme Colors
+$theme-colors: (
+  "primary": #5656ff,
+  "secondary": #13c8ff,
+);
+
+// Bootstrap and It's default variables
+@import "node_modules/bootstrap/scss/bootstrap";
