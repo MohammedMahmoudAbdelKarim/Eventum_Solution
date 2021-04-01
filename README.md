@@ -1,6 +1,11 @@
-# Eventum
+# Eventum Solution UI Developer Task.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
+
+## Setup Requirements:
+
+1- Installing Node JS => https://nodejs.org/en/
+2- Then Installing Angular CLI => https://cli.angular.io/
 
 ## Development server
 

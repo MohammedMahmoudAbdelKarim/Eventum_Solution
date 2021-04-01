@@ -12,11 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import {
-  DateAdapter,
-  MAT_DATE_FORMATS,
-  MAT_DATE_LOCALE,
-} from '@angular/material/core';
+import { MAT_DATE_FORMATS } from '@angular/material/core';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 export const MY_FORMATS = {
   parse: {
@@ -38,6 +35,7 @@ export const MY_FORMATS = {
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
+    NgApexchartsModule,
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,

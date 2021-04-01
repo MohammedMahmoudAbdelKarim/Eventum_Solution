@@ -4,7 +4,8 @@
     <div class="w-100 d-flex h-100 align-items-center justify-content-between">
       <!-- Logo  -->
       <div class="logo-container h-100 text-center d-flex align-items-center justify-content-center">
-        <img class="logo d-flex" src="assets/images/logo.png" alt="Logo" />
+        <img class="logo d-flex" *ngIf="!isDarkTheme" src="assets/images/logo.png" alt="Logo" />
+        <img class="logo d-flex" *ngIf="isDarkTheme" src="assets/images/dark-logo.png" alt="Logo" />
       </div>
       <!-- Menu Toggle -->
       <div class="toolbar-actions w-100 h-100 d-flex align-items-center justify-content-between px-3">

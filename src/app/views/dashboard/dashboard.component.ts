@@ -4,6 +4,46 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
+
+import {
+  ApexAxisChartSeries,
+  ApexXAxis,
+  ApexDataLabels,
+  ApexStroke,
+  ApexYAxis,
+  ApexTitleSubtitle,
+  ApexLegend,
+} from 'ng-apexcharts';
+
+import {
+  ApexNonAxisChartSeries,
+  ApexResponsive,
+  ApexChart,
+  ChartComponent,
+} from 'ng-apexcharts';
+
+import { series } from '../data';
+
+export type ChartOptions_2 = {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  xaxis: ApexXAxis;
+  stroke: ApexStroke;
+  dataLabels: ApexDataLabels;
+  yaxis: ApexYAxis;
+  title: ApexTitleSubtitle;
+  labels: string[];
+  legend: ApexLegend;
+  subtitle: ApexTitleSubtitle;
+};
+
+export type ChartOptions = {
+  series: ApexNonAxisChartSeries;
+  chart: ApexChart;
+  responsive: ApexResponsive[];
+  labels: any;
+};
+
 import {
   DateAdapter,
   MAT_DATE_FORMATS,
@@ -171,6 +211,12 @@ export const MY_FORMATS = {
   ],
 })
 export class DashboardComponent implements OnInit {
+  @ViewChild('chart') chart: ChartComponent;
+  public chartOptions: Partial<ChartOptions>;
+
+  @ViewChild('chart2') chart2: ChartComponent;
+  public chartOptions_2: Partial<ChartOptions_2>;
+
   displayedColumns: string[] = [
     'id',
     'name',
@@ -211,6 +257,79 @@ export class DashboardComponent implements OnInit {
     });
     this.dataSource = new MatTableDataSource(Googele_Users);
     this.dataSource_2 = new MatTableDataSource(Gamers);
+    this.chartOptions = {
+      series: [44, 55, 13, 43, 22],
+      chart: {
+        fontFamily: 'Poppins',
+        width: 450,
+        type: 'pie',
+      },
+
+      labels: [
+        'Gmail',
+        'Google Meet',
+        'Google Chrome',
+        'Youtube',
+        'Google Docs',
+      ],
+
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 250,
+            },
+            legend: {
+              position: 'bottom',
+            },
+          },
+        },
+      ],
+    };
+    this.chartOptions_2 = {
+      series: [
+        {
+          name: 'Application Duration',
+          data: series.monthDataSeries1.prices,
+        },
+      ],
+      chart: {
+        fontFamily: 'Poppins',
+        type: 'area',
+        height: 350,
+        zoom: {
+          enabled: true,
+        },
+      },
+
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        curve: 'straight',
+      },
+      labels: series.monthDataSeries1.dates,
+      xaxis: {
+        type: 'datetime',
+        labels: {
+          style: {
+            colors: '#5b6e88',
+          },
+        },
+      },
+      yaxis: {
+        opposite: true,
+        labels: {
+          style: {
+            colors: '#5b6e88',
+          },
+        },
+      },
+      legend: {
+        horizontalAlign: 'left',
+      },
+    };
   }
 
   getDate() {
