@@ -1,8 +1,10 @@
-<section id="dashboard" class="p-3 poppins">
+<section id="dashboard" class="p-lg-3 poppins">
   <!-- BreadCurme -->
   <div class="breadcurme d-flex align-items-center px-3">
     <mat-icon>dashboard</mat-icon>
     <span class="ml-2 font-weight-bold">Dashboard</span>
+  </div>
+  <div class="pl-lg-3">
   </div>
   <!-- Dashboard Cards -->
   <div class="row w-100 mx-0 mt-4">
@@ -76,9 +78,33 @@
       </div>
     </div>
   </div>
+  <div class="row w-100 mx-0 mt-4">
+    <div class="col-md-6">
+      <div class="card-widgets h-100 p-3">
+        <h3 class="text-uppercase font-weight-bold title mb-0 poppins">Most Used of Google Apps</h3>
+        <p class="description poppins">You can track and measure the user activities</p>
+        <div id="chart">
+          <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [labels]="chartOptions.labels"
+            [responsive]="chartOptions.responsive"></apx-chart>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mt-3 mt-lg-0">
+      <div class="card-widgets h-100 p-3">
+        <h3 class="text-uppercase font-weight-bold title mb-0 poppins">Average of Duration using Apps</h3>
+        <p class="description poppins">You can track and measure the user activities</p>
+        <div id="chart2">
+          <apx-chart [series]="chartOptions_2.series" [chart]="chartOptions_2.chart" [xaxis]="chartOptions_2.xaxis"
+            [stroke]="chartOptions_2.stroke" [dataLabels]="chartOptions_2.dataLabels" [yaxis]="chartOptions_2.yaxis"
+            [labels]="chartOptions_2.labels" [legend]="chartOptions_2.legend" [title]="chartOptions_2.title"
+            [subtitle]="chartOptions_2.subtitle"></apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Table Widgets -->
-  <div class="p-3">
-    <div class="card-widgets w-100 mt-4 p-3">
+  <div class="p-lg-3">
+    <div class="card-widgets w-100 mt-4 p-lg-3">
       <div class="row w-100 mx-0">
         <div class="col-md-12">
           <div class="d-flex align-items-center justify-content-between row mx-0 w-100 no-gutters">
@@ -209,30 +235,6 @@
               </tr>
             </table>
             <mat-paginator #TableTwoPaginator="matPaginator" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row w-100 mx-0">
-      <div class="col-md-6 pl-lg-0">
-        <div class="card-widgets h-100 p-3">
-          <h3 class="text-uppercase font-weight-bold title mb-0 poppins">Most Used of Google Apps</h3>
-          <p class="description poppins">You can track and measure the user activities</p>
-          <div id="chart">
-            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [labels]="chartOptions.labels"
-              [responsive]="chartOptions.responsive"></apx-chart>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 pr-lg-0">
-        <div class="card-widgets h-100 p-3">
-          <h3 class="text-uppercase font-weight-bold title mb-0 poppins">Average of Duration using Apps</h3>
-          <p class="description poppins">You can track and measure the user activities</p>
-          <div id="chart2">
-            <apx-chart [series]="chartOptions_2.series" [chart]="chartOptions_2.chart" [xaxis]="chartOptions_2.xaxis"
-              [stroke]="chartOptions_2.stroke" [dataLabels]="chartOptions_2.dataLabels" [yaxis]="chartOptions_2.yaxis"
-              [labels]="chartOptions_2.labels" [legend]="chartOptions_2.legend" [title]="chartOptions_2.title"
-              [subtitle]="chartOptions_2.subtitle"></apx-chart>
           </div>
         </div>
       </div>
