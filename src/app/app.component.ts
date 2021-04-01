@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   constructor(private observer: BreakpointObserver) {}
 
   date: Date = new Date();
+  isDarkTheme: boolean = false;
 
   ngOnInit() {
     setInterval(() => {

@@ -78,7 +78,7 @@
     <div class="card-widgets w-100 mt-4 p-3">
       <div class="row w-100 mx-0">
         <div class="col-md-12">
-          <div class="d-flex align-items-center justify-content-between row mx-0 w-100">
+          <div class="d-flex align-items-center justify-content-between row mx-0 w-100 no-gutters">
             <div class="col-md-4">
               <h3 class="text-uppercase font-weight-bold title mb-0 poppins">Users Activites</h3>
               <p class="description poppins">You can track and measure the user activities</p>
@@ -96,7 +96,7 @@
         </div>
         <div class="col-md-12">
           <h4 class="sub-title font-weight-bold title mb-0 poppins">User Activities within Google Apps</h4>
-          <mat-form-field appearance="outline" class="poppins">
+          <mat-form-field appearance="outline" class="poppins search-table">
             <mat-label>Search</mat-label>
             <input matInput class="poppins" (keyup)="applyFilterOne($event)" placeholder="Search" #input>
           </mat-form-field>
@@ -153,7 +153,7 @@
         </div>
         <div class="col-md-12 mt-3">
           <h4 class="sub-title font-weight-bold title mb-0 poppins">User Activities within Games</h4>
-          <mat-form-field appearance="outline" class="poppins">
+          <mat-form-field appearance="outline" class="poppins search-table">
             <mat-label>Search</mat-label>
             <input matInput class="poppins" (keyup)="applyFilterTwo($event)" placeholder="Search" #input>
           </mat-form-field>

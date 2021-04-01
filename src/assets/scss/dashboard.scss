@@ -95,3 +95,43 @@
 .mat-paginator-page-size-label {
   font-family: "Poppins" !important;
 }
+
+// Mobile
+@media (min-width: 320px) and (max-width: 425px) {
+  .search-table {
+    width: 100%;
+  }
+  .mat-paginator {
+    margin-top: 20px;
+  }
+  .mat-paginator-range-label {
+    margin: 0 24px 0 24px !important;
+  }
+}
+
+// Tablet
+@media (min-width: 426px) and (max-width: 768px) {
+  .search-table {
+    width: 100%;
+  }
+  .mat-paginator {
+    margin-top: 20px;
+  }
+  .mat-paginator-range-label {
+    margin: 0 24px 0 24px !important;
+  }
+}
+
+.change-themes {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 9;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(27px);
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cdd4e7;
+  border-radius: 5px;
+  color: #5b6e88;
+}

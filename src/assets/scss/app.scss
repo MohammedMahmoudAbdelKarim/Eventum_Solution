@@ -13,6 +13,13 @@
 // Dashboard
 @import "./dashboard.scss";
 
+//-------- Dark Theme Custom ------------ //@include
+// Side-Menu
+@import "./dark/side-menu.scss";
+
+// Dashboard
+@import "./dark/dashboard.scss";
+
 // Scroll
 ::-webkit-scrollbar {
   width: 0.2em;
